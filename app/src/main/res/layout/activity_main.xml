@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logoImageView"
         android:layout_width="214dp"
         android:layout_height="130dp"
         android:layout_marginTop="8dp"
@@ -18,57 +18,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.021"
-        app:srcCompat="@drawable/Logo1" />
+        app:srcCompat="@drawable/logo" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/homepageArtImageView"
         android:layout_width="312dp"
         android:layout_height="129dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/homepageSucculent" />
+        app:srcCompat="@drawable/homepage_art" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/myGardenButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/careCalendarButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/MyGardenButton" />
+        app:srcCompat="@drawable/my_garden_button" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/careCalendarButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/arrangementButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/myGardenButton"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/CareCalendarButton" />
+        app:srcCompat="@drawable/care_calendar_button" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/arrangementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/homepageArtImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/careCalendarButton"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/arrangementPlanningButton" />
+        app:srcCompat="@drawable/arrangement_button" />
 
 </android.support.constraint.ConstraintLayout>
