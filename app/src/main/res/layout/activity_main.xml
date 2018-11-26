@@ -13,6 +13,7 @@
         android:layout_height="130dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
+        android:background="@android:color/transparent"
         app:srcCompat="@drawable/homepage_art" />
 
     <ImageButton
@@ -45,6 +47,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoImageView"
         app:layout_constraintVertical_bias="0.0"
+        android:background="@android:color/transparent"
+        android:onClick="goMyGarden"
         app:srcCompat="@drawable/my_garden_button" />
 
     <ImageButton
@@ -58,7 +62,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myGardenButton"
         app:layout_constraintVertical_bias="0.0"
+        android:background="@android:color/transparent"
         app:srcCompat="@drawable/care_calendar_button" />
+    <!-- android:onClick="goCareCalendar" -->
 
     <ImageButton
         android:id="@+id/arrangementButton"
@@ -70,6 +76,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/careCalendarButton"
         app:layout_constraintVertical_bias="0.0"
+        android:background="@android:color/transparent"
         app:srcCompat="@drawable/arrangement_button" />
+    <!-- android:onClick="goArrangementPlanning" -->
 
 </android.support.constraint.ConstraintLayout>
