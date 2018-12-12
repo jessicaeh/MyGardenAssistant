@@ -18,7 +18,11 @@
         </activity>
         <activity android:name=".MyGarden" />
         <activity android:name=".NewPlantScreen" />
-        <activity android:name=".ViewPlantScreen"></activity>
+        <activity android:name=".ViewPlantScreen" />
+        <activity
+            android:name=".CareCalendar"
+            android:label="@string/title_activity_care_calendar"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

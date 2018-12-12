@@ -3,4 +3,5 @@
     <string name="edit_plant_name">Plant Name</string>
     <string name="edit_plant_location">Location</string>
     <string name="edit_plant_notes">Notes</string>
+    <string name="title_activity_care_calendar">CareCalendar</string>
 </resources>
