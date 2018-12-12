@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">My Gardening Assistant</string>
+    <string name="edit_plant_name">Plant Name</string>
+    <string name="edit_plant_location">Location</string>
+    <string name="edit_plant_notes">Notes</string>
 </resources>

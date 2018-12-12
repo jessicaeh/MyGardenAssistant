@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MyGarden"></activity>
+        <activity android:name=".MyGarden" />
+        <activity android:name=".NewPlantScreen" />
+        <activity android:name=".ViewPlantScreen"></activity>
     </application>
 
 </manifest>
