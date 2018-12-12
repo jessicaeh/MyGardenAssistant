@@ -3,4 +3,14 @@
     <string name="edit_plant_name">Plant Name</string>
     <string name="edit_plant_location">Location</string>
     <string name="edit_plant_notes">Notes</string>
+    <string name="current_date">June, 2016</string>
+    <string name="add_event">Add Calendar Event</string>
+    <string name="sun">SUN</string>
+    <string name="mon">MON</string>
+    <string name="tue">TUE</string>
+    <string name="wed">WED</string>
+    <string name="thu">THU</string>
+    <string name="fri">FRI</string>
+    <string name="sat">SAT</string>
+    <string name="last_date">30</string>
 </resources>
