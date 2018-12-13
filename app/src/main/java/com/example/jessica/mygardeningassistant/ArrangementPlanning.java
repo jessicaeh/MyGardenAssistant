@@ -50,7 +50,7 @@ public class ArrangementPlanning extends AppCompatActivity implements AdapterVie
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String tall = "Sunflowers\nGladioli\nAgeratum\nTulips\nAloe\nSnake Plant\nMadagascar Ocotillo";
-        String shorts = "Sweetherat Hoya\nPanda Plant\nBarrel Cactus\nJade";
+        String shorts = "Sweetheart Hoya\nPanda Plant\nBarrel Cactus\nJade";
         String wide = "Agave\nFern\nHens and Chicks\nZebra Plant\nPeace Lily\nParlor Palm";
         String thin = "Burro's Tail\nDragon Tree\nZZ Plant";
 

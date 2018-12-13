@@ -41,6 +41,11 @@ public class MyGarden extends AppCompatActivity {
             //then add it to the ArrayList
             listData.add(data.getString(1) + " (added " + data.getString(2) + ")");
         }
+
+        if (data != null && !data.isClosed()) {
+            data.close();
+        }
+
         //create the list adapter and set the adapter
         ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
         plantListView.setAdapter(adapter);
@@ -79,6 +84,10 @@ public class MyGarden extends AppCompatActivity {
                 }
                 else{
                     toastMessage("No ID associated with that name");
+                }
+
+                if (data != null && !data.isClosed()) {
+                    data.close();
                 }
             }
         });
