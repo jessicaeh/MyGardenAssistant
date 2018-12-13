@@ -35,7 +35,7 @@
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="ffffff" />
-                                      <entry key="foregroundImage" value="C:\Users\Jessica\Desktop\CS\MAD\PersonalProject\Graphics\homepageSucculent.png" />
+                                      <entry key="foregroundImage" value="C:\Users\Jessica\Desktop\CS\MAD\PersonalProject\Graphics\hiResIconTransparent.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -48,7 +48,6 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="cropped" value="true" />
-                                      <entry key="iconShape" value="CIRCLE" />
                                       <entry key="imageAsset" value="C:\Users\Jessica\Desktop\CS\MAD\PersonalProject\Graphics\icon2.png" />
                                       <entry key="outputName" value="ic_launcher_round" />
                                     </map>
