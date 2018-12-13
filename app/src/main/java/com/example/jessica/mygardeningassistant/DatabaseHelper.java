@@ -80,6 +80,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void updateData(String newName, String newDate, String newLoc, String newNotes, int id){
+        newName = newName.replace("'","''");
+        newLoc = newLoc.replace("'","''");
+        newNotes = newNotes.replace("'","''");
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "UPDATE " + TABLE_NAME + " SET " + COL2 + " = '" + newName + "', "
                 + COL3 + " = '" + newDate + "', "

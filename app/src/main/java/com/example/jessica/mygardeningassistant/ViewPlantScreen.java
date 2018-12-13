@@ -78,7 +78,7 @@ public class ViewPlantScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 db.deleteData(selectedID);
-                toastMessage("removed from database");
+//                toastMessage("removed from database");
                 startActivity(new Intent(ViewPlantScreen.this, MyGarden.class));
             }
         });

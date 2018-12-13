@@ -18,7 +18,11 @@
         </activity>
         <activity android:name=".MyGarden" />
         <activity android:name=".NewPlantScreen" />
-        <activity android:name=".ViewPlantScreen"></activity>
+        <activity android:name=".ViewPlantScreen" />
+        <activity android:name=".CareCalendar" />
+        <activity android:name=".CreateTask" />
+        <activity android:name=".ViewTask" />
+        <activity android:name=".Credit"></activity>
     </application>
 
 </manifest>

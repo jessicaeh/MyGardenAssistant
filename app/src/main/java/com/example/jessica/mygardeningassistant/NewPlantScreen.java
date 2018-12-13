@@ -62,7 +62,7 @@ public class NewPlantScreen extends AppCompatActivity {
         boolean insertData = db.addData(newEntryName, newEntryDate, newEntryLoc, newEntryNotes);
 
         if (insertData) {
-            toastMessage("Data Successfully Inserted");
+//            toastMessage("Data Successfully Inserted");
         } else {
             toastMessage("Something went wrong. Make sure the name is not a duplicate!");
         }

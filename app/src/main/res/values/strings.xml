@@ -3,4 +3,5 @@
     <string name="edit_plant_name">Plant Name</string>
     <string name="edit_plant_location">Location</string>
     <string name="edit_plant_notes">Notes</string>
+    <string name="blurb">Version 1 (WIP)</string>
 </resources>

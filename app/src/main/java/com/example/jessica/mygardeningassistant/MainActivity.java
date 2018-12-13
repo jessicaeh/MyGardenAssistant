@@ -17,4 +17,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MyGarden.class);
         startActivity(intent);
     }
+
+    public void goCareCalendar (View view) {
+        Intent intent = new Intent(this, CareCalendar.class);
+        startActivity(intent);
+    }
+
+    public void goCredit (View view) {
+        Intent intent = new Intent(this, Credit.class);
+        startActivity(intent);
+    }
 }
