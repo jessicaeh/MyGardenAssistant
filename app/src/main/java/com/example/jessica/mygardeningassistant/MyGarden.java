@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+//import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -31,7 +31,7 @@ public class MyGarden extends AppCompatActivity {
     }
 
     private void populateListView() {
-        Log.d(TAG, "populateListView: Displaying data in the ListView.");
+//        Log.d(TAG, "populateListView: Displaying data in the ListView.");
 
         //get the data and append to a list
         Cursor data = db.getData();
@@ -56,7 +56,7 @@ public class MyGarden extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String hold = adapterView.getItemAtPosition(i).toString();
                 String name = hold.substring(0, hold.indexOf(" ("));
-                Log.d(TAG, "onItemClick: You Clicked on " + name + ".");
+//                Log.d(TAG, "onItemClick: You Clicked on " + name + ".");
 
                 Cursor data = db.getItemID(name); //get the id associated with that name
                 int itemID = -1;
@@ -69,11 +69,11 @@ public class MyGarden extends AppCompatActivity {
                     itemDate = data.getString(2);
                     itemLoc = data.getString(3);
                     itemNotes = data.getString(4);
-                    Log.d(TAG, "onItemClick: 1 " + data.getInt(0) + " 2 " + data.getString(1) +
-                            " 3 " + data.getString(2) + " 4 " + data.getString(3) + " 5 " + data.getString(4));
+//                    Log.d(TAG, "onItemClick: 1 " + data.getInt(0) + " 2 " + data.getString(1) +
+//                            " 3 " + data.getString(2) + " 4 " + data.getString(3) + " 5 " + data.getString(4));
                 }
                 if(itemID > -1){
-                    Log.d(TAG, "onItemClick: The ID is: " + itemID + " date " + itemDate + " loc " + itemLoc + " note " + itemNotes);
+//                    Log.d(TAG, "onItemClick: The ID is: " + itemID + " date " + itemDate + " loc " + itemLoc + " note " + itemNotes);
                     Intent editScreenIntent = new Intent(MyGarden.this, ViewPlantScreen.class);
                     editScreenIntent.putExtra("id",itemID);
                     editScreenIntent.putExtra("name", name);

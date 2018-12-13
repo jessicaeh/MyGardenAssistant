@@ -6,7 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
+//import android.util.Log;
 
 public class DBTaskHelper extends SQLiteOpenHelper {
     private static final String TAG = "DatabaseHelper";
@@ -42,7 +42,7 @@ public class DBTaskHelper extends SQLiteOpenHelper {
         if (getItemID(newEntryTask, newEntryDate).getCount() != 0)
             return false;
 
-        Log.d(TAG, "addData: Adding " + newEntryTask + " to " + TABLE_NAME);
+//        Log.d(TAG, "addData: Adding " + newEntryTask + " to " + TABLE_NAME);
         long result = db.insert(TABLE_NAME, null, contentValues);
 
         if (result == -1) {
@@ -60,7 +60,7 @@ public class DBTaskHelper extends SQLiteOpenHelper {
         String query = "UPDATE " + TABLE_NAME + " SET " + COL2 + " = '" + newTask + "', "
                 + COL3 + " = '" + newDate
                 + "' WHERE " + COL1 + " = '" + id + "'";
-        Log.d(TAG, "updateName: query: " + query);
+//        Log.d(TAG, "updateName: query: " + query);
         db.execSQL(query);
     }
 
@@ -92,8 +92,8 @@ public class DBTaskHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "DELETE FROM " + TABLE_NAME + " WHERE "
                 + COL1 + " = '" + id + "'";
-        Log.d(TAG, "deleteName: query: " + query);
-        Log.d(TAG, "deleteName: Deleting " + id + " from database.");
+//        Log.d(TAG, "deleteName: query: " + query);
+//        Log.d(TAG, "deleteName: Deleting " + id + " from database.");
         db.execSQL(query);
     }
 }

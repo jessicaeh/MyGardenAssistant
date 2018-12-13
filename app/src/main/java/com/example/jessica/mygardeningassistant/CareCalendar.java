@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+//import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -31,7 +31,7 @@ public class CareCalendar extends AppCompatActivity {
     }
 
     private void populateListView() {
-        Log.d(TAG, "populateListView: Displaying data in the ListView.");
+//        Log.d(TAG, "populateListView: Displaying data in the ListView.");
 
         //get the data and append to a list
         Cursor data = db.getData();
@@ -57,7 +57,7 @@ public class CareCalendar extends AppCompatActivity {
                 String hold = adapterView.getItemAtPosition(i).toString();
                 String date = hold.substring(0, hold.indexOf(":"));
                 String task = hold.substring(hold.indexOf(": ") + 2);
-                Log.d(TAG, "onItemClick: You Clicked on " + date + " with task " + task + ".");
+//                Log.d(TAG, "onItemClick: You Clicked on " + date + " with task " + task + ".");
 
                 Cursor data = db.getItemID(task, date); //get the id associated with that name
                 int itemID = -1;
@@ -66,7 +66,7 @@ public class CareCalendar extends AppCompatActivity {
                     itemID = data.getInt(0);
                 }
                 if(itemID > -1){
-                    Log.d(TAG, "onItemClick: The ID is: " + itemID + " date " + date + " task " + task  + ".");
+//                    Log.d(TAG, "onItemClick: The ID is: " + itemID + " date " + date + " task " + task  + ".");
                     Intent editScreenIntent = new Intent(CareCalendar.this, ViewTask.class);
                     editScreenIntent.putExtra("id",itemID);
                     editScreenIntent.putExtra("task", task);

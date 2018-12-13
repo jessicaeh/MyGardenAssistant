@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
+//import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String TAG = "DatabaseHelper";
@@ -42,12 +42,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL3, newEntryDate);
         contentValues.put(COL4, newEntryLoc);
         contentValues.put(COL5, newEntryNote);
-        Log.d(TAG, "addData: loc =  " + newEntryLoc + " notes = " + newEntryNote);
+//        Log.d(TAG, "addData: loc =  " + newEntryLoc + " notes = " + newEntryNote);
 
         if (getItemID(newEntryName).getCount() != 0)
             return false;
 
-        Log.d(TAG, "addData: Adding " + newEntryName + " to " + TABLE_NAME);
+//        Log.d(TAG, "addData: Adding " + newEntryName + " to " + TABLE_NAME);
         long result = db.insert(TABLE_NAME, null, contentValues);
 
         if (result == -1) {
@@ -89,7 +89,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + COL4 + " = '" + newLoc + "', "
                 + COL5 + " = '" + newNotes
                 + "' WHERE " + COL1 + " = '" + id + "'";
-        Log.d(TAG, "updateName: query: " + query);
+//        Log.d(TAG, "updateName: query: " + query);
         db.execSQL(query);
     }
 
@@ -97,8 +97,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "DELETE FROM " + TABLE_NAME + " WHERE "
                 + COL1 + " = '" + id + "'";
-        Log.d(TAG, "deleteName: query: " + query);
-        Log.d(TAG, "deleteName: Deleting " + id + " from database.");
+//        Log.d(TAG, "deleteName: query: " + query);
+//        Log.d(TAG, "deleteName: Deleting " + id + " from database.");
         db.execSQL(query);
     }
 
@@ -114,8 +114,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 " AND " + COL2 + " = '" + name
                 + "'" + " AND " + COL3 + " = '"
                 + stat + "'" + " AND " + COL4 + " = '" + date + "'";
-        Log.d(TAG, "deleteName: query: " + query);
-        Log.d(TAG, "deleteName: Deleting " + id + " from database.");
+//        Log.d(TAG, "deleteName: query: " + query);
+//        Log.d(TAG, "deleteName: Deleting " + id + " from database.");
         db.execSQL(query);
     }
 }
