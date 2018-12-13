@@ -3,5 +3,6 @@
     <string name="edit_plant_name">Plant Name</string>
     <string name="edit_plant_location">Location</string>
     <string name="edit_plant_notes">Notes</string>
-    <string name="blurb">Version 1 (WIP)</string>
+    <string name="blurb">Use this tool to help plan your arrangements! Choose what kind of plant
+    you\'re looking for in the dropdown.</string>
 </resources>

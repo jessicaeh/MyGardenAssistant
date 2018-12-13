@@ -27,4 +27,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Credit.class);
         startActivity(intent);
     }
+
+    public void goArrangement (View view) {
+        Intent intent = new Intent(this, ArrangementPlanning.class);
+        startActivity(intent);
+    }
 }

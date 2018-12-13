@@ -22,7 +22,8 @@
         <activity android:name=".CareCalendar" />
         <activity android:name=".CreateTask" />
         <activity android:name=".ViewTask" />
-        <activity android:name=".Credit"></activity>
+        <activity android:name=".Credit" />
+        <activity android:name=".ArrangementPlanning"></activity>
     </application>
 
 </manifest>
