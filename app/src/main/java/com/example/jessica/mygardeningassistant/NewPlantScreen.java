@@ -1,11 +1,14 @@
 package com.example.jessica.mygardeningassistant;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
@@ -18,7 +21,9 @@ public class NewPlantScreen extends AppCompatActivity {
     private EditText name;
     private EditText loc;
     private EditText notes;
-    private Button submit;
+    private Button submit, btnCam;
+    private ImageView mImageView;
+    static final int REQUEST_IMAGE_CAPTURE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,8 @@ public class NewPlantScreen extends AppCompatActivity {
         loc = (EditText) findViewById(R.id.editPlantLocation);
         notes = (EditText) findViewById(R.id.editPlantNotes);
         submit = (Button) findViewById(R.id.submitButton);
+        btnCam = (Button) findViewById(R.id.buttonCam);
+        mImageView = (ImageView) findViewById(R.id.imageView2);
         db = new DatabaseHelper(this);
 
         submit.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +63,13 @@ public class NewPlantScreen extends AppCompatActivity {
                 startActivity(new Intent(NewPlantScreen.this, MyGarden.class));
             }
         });
+
+        btnCam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dispatchTakePictureIntent();
+            }
+        });
     }
 
     public void AddData(String newEntryName, String newEntryDate, String newEntryLoc, String newEntryNotes){
@@ -71,5 +85,21 @@ public class NewPlantScreen extends AppCompatActivity {
 
     private void toastMessage(String message) {
         Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
+    }
+
+    private void dispatchTakePictureIntent() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            mImageView.setImageBitmap(imageBitmap);
+        }
     }
 }
